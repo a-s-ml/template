@@ -16,5 +16,5 @@
 		"noEmit": true,
 		"jsx": "react-jsx"
 	},
-	"include": ["src", "src/components/models/src/window.d.ts"]
+	"include": ["src", "src/components/models/src/window.d.ts", "src/components/models/index.ts"]
 }

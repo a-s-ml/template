@@ -1,4 +1,4 @@
-export interface IUser {
+export type User = {
 	id: number
 	first_name?: string
 	last_name?: string
@@ -7,13 +7,13 @@ export interface IUser {
 	allows_write_to_pm?: boolean
 }
 
-export interface IUserDataReq {
+export type UserDataReq = {
 	auth_date: number
 	query_id: string
-	user: IUser
+	user: User
 }
 
-export interface IValidate {
+export type IValidate = {
 	validate: boolean
-	UserData: IUserDataReq
+	UserData: UserDataReq
 }

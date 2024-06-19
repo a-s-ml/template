@@ -5,10 +5,10 @@ import {
 	CircleStackIcon,
 	BanknotesIcon
 } from "@heroicons/react/20/solid"
-import { INavigate } from "../models"
 import { TemplatePage } from "../pages"
+import { Navigate } from "../models"
 
-export const navigate: INavigate[] = [
+export const navigate: Navigate[] = [
 	{
 		name: "Exchange",
 		icon: HomeIcon,

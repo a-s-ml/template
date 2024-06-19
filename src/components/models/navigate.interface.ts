@@ -1,4 +1,4 @@
-export interface INavigate {
+export type Navigate = {
 	name: string
 	icon: React.ForwardRefExoticComponent<
 		Omit<React.SVGProps<SVGSVGElement>, "ref">

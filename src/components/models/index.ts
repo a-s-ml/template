@@ -1,3 +1,3 @@
-export type { IUser, IUserDataReq, IValidate } from './chat.interface'
-export type { INavigate } from './navigate.interface'
-export type { IUserDataRes } from './useData.interface'
+export type { User, UserDataReq, IValidate } from './chat.interface'
+export type { Navigate } from './navigate.interface'
+export type { UserDataRes } from './useData.interface'
