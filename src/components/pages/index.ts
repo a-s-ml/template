@@ -1,0 +1,8 @@
+export { Empty } from './Empty'
+export { ErrorPage } from './ErrorPage'
+export { Main } from './Main'
+export { Preloader } from './Preloader/Preloader'
+export { SlidePage } from './SlidePage'
+export { ModalPage } from './ModalPage'
+export { TemplatePage } from './TemplatePage'
+export { Nav } from './Nav'
