@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { Empty } from "./components/pages";
+import { EmptyPage } from "./components/pages";
 
 const App = lazy(() =>
   import("./App").then(({ App }) => ({
@@ -20,7 +20,7 @@ root.render(
         <App />
       </Suspense>
     ) : (
-      <Empty />
+      <EmptyPage />
     )}
   </React.StrictMode>
 );

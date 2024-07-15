@@ -4,20 +4,21 @@ import {
 	Transition,
 	TransitionChild
 } from "@headlessui/react"
-import { selectModal, showModal } from "../store/slices/botApp.slice"
 import { useBotDispatch, useBotSelector } from "../store"
-import { TemplatePage } from "../pages"
+import { selectProfile, showProfile } from "../store/slices/botApp.slice"
+import { ProfileForm } from "../elements"
+import { XMarkIcon } from "@heroicons/react/20/solid"
 
-export const ModalPage = () => {
+export const ProfilePage = () => {
 	const dispatch = useBotDispatch()
-	const modal = useBotSelector(selectModal)
+	const profile = useBotSelector(selectProfile)
 
 	return (
-		<Transition appear show={modal.show}>
+		<Transition appear show={profile}>
 			<Dialog
 				as='div'
 				className='relative z-30'
-				onClose={() => dispatch(showModal({ show: true, page: "" }))}
+				onClose={() => dispatch(showProfile(false))}
 			>
 				<div className='fixed inset-0 z-10 w-screen h-screen'>
 					<div className='flex w-screen h-screen items-center justify-center'>
@@ -30,7 +31,21 @@ export const ModalPage = () => {
 							leaveTo='opacity-0 transform-[scale(95%)]'
 						>
 							<DialogPanel className='w-screen h-screen bg-black text-white'>
-								<TemplatePage />
+								<button
+									type='button'
+									className='absolute right-[28px] top-[-14px] font-medium text-white p-1 rounded-full bg-[#F34D71]'
+									onClick={() => dispatch(showProfile(false))}
+								>
+									<XMarkIcon className='w-7 h-7' />
+								</button>
+								<div className='m-4 border-b-2 border-[#F34D71] '>
+									<div className='text-center py-4'>
+										<span className='text-[16px] font-medium py-4'>
+											Моя анкета
+										</span>
+									</div>
+								</div>
+								<ProfileForm />
 							</DialogPanel>
 						</TransitionChild>
 					</div>

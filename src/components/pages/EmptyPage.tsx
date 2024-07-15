@@ -1,4 +1,4 @@
-export const Empty = () => {
+export const EmptyPage = () => {
 	const tg = window.Telegram.WebApp
 	return (
 		<main className='grid min-h-full place-items-center bg-black px-6 py-24 sm:py-32 lg:px-8'>
