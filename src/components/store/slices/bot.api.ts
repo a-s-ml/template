@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react"
 import { IValidate } from "../../models/chat.interface"
 
 const staggeredBaseQuery = retry(
-	fetchBaseQuery({ baseUrl: "https://api80q.ru/hamster/" }),
+	fetchBaseQuery({ baseUrl: "https://api80q.ru/dating" }),
 	{ maxRetries: 1 }
 )
 
@@ -17,7 +17,7 @@ export const botApi = createApi({
 				url: `chat/validateUser/${initData}`
 			}),
 			providesTags: ["Validate"]
-		})
+		}),
 	})
 })
 

@@ -1,6 +1,7 @@
 import { useEffect } from "react"
-import { BioPage, ComplaintPage, FilterPage, HomePage, ProfilePage } from "."
+import { ErrorPage } from "."
 import { useValidateQuery } from "../store/slices/bot.api"
+import { FullScreen, ModalPage, Nav, Preloader, SlidePage } from "../elements"
 
 export const MainPage = () => {
 	const tg = window.Telegram.WebApp
@@ -12,16 +13,29 @@ export const MainPage = () => {
 	useEffect(() => {
 		tg.expand()
 		tg.ready()
-		tg.setHeaderColor("#000000")
+		tg.setHeaderColor("#17212b")
 	}, [tg])
 
 	return (
 		<>
-			<FilterPage />
-			<HomePage />
-			<ComplaintPage />
-			<BioPage />
-			<ProfilePage />
+			{loadUser && (
+				<>
+					<FullScreen style={"center"}>
+						<Preloader />
+					</FullScreen>
+				</>
+			)}
+			<>
+				{dataUser ? (
+					<>
+						<Nav />
+						<ModalPage />
+						<SlidePage />
+					</>
+				) : (
+					<ErrorPage />
+				)}
+			</>
 		</>
 	)
 }

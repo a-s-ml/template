@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	:root {
+		--tg-AccentTextColor: 106 178 242;
+		--tg-BgColor: 23 33 43;
+		--tg-ButtonColor: 82 136 193;
+		--tg-ButtonTextColor: 255 255 255;
+		--tg-DestructiveTextColor: 236 57 66;
+		--tg-HeaderBgColor: 23 33 43;
+		--tg-HintColor: 112 132 153;
+		--tg-LinkColor: 106 179 243;
+		--tg-SecondaryBgColor: 35 46 60;
+		--tg-SectionBgColor: 23 33 43;
+		--tg-SectionHeaderTextColor: 106 179 243;
+		--tg-SectionSeparatorColor: 17 25 33;
+		--tg-SubtitleTextColor: 112 132 153;
+		--tg-TextColor: 245 245 245;
+	}
+}
