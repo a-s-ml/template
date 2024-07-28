@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    {tg.platform !== "tdesktop" ? (
+    {!tg || tg.platform === "tdesktop" || tg.platform === "web" ? (
       <Suspense>
         <App />
       </Suspense>

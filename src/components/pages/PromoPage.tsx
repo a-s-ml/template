@@ -33,7 +33,7 @@ export const PromoPage = () => {
 				<div className='flex flex-row space-x-2 items-start justify-center'>
 					{promo.map((slide, slideIndex) => (
 						<li
-							key={promo[slideIndex].id}
+							key={slide.id}
 							onClick={() => goToSlide(slideIndex)}
 							className={classNames(
 								promo[slideIndex].id === currentIndex + 1
